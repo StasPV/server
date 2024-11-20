@@ -9,6 +9,7 @@ use std::{
 fn main() {
     let local_ip = get_local_ip().unwrap().to_string();
     let listener = TcpListener::bind(format!("{}:7878", local_ip)).unwrap();
+    println!("Сервер запущен по адресу: {}:7878",local_ip);
     let pool = ThreadPool::new(4);
     for stream in listener.incoming() {
         let stream = stream.unwrap();
