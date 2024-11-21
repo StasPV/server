@@ -11,6 +11,7 @@
             "cargo": {
                 "args": [
                     "build",
+                    "-q",
                     "--bin=server",
                     "--package=server"
                 ],
